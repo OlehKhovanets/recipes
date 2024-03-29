@@ -1,10 +1,10 @@
 <?php
 
 return [
-    'name' => 'InterviewExpert',
+    'name' => 'Recipes',
     'manifest' => [
-        'name' => 'InterviewExpert',
-        'short_name' => 'IExpert',
+        'name' => 'Recipes',
+        'short_name' => 'Recipes',
         'start_url' => '/',
         'background_color' => '#ffffff',
         'theme_color' => '#a2cffc',
