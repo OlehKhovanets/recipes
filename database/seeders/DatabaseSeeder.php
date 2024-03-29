@@ -31,5 +31,19 @@ class DatabaseSeeder extends Seeder
                 'qr_token' => Str::random(60),
             ]);
         }
+
+        $user = User::query()
+            ->where('email', 'ms.tomilovich@gmail.com')
+            ->first();
+
+        if (!$user) {
+            User::query()->create([
+                'email' => 'ms.tomilovich@gmail.com',
+                'name' => 'Sanya',
+                'password' => bcrypt('qwerty'),
+                'is_admin' => true,
+                'qr_token' => Str::random(60),
+            ]);
+        }
     }
 }
