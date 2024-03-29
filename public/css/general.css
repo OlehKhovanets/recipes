@@ -1,0 +1,107 @@
+.ce-code__textarea {
+    min-height: 200px;
+    font-family: Menlo, Monaco, Consolas, Courier New, monospace;
+    color: #41314e;
+    line-height: 1.6em;
+    font-size: 12px;
+    background: #f8f7fa;
+    border: 1px solid #f1f1f4;
+    box-shadow: none;
+    white-space: pre;
+    word-wrap: normal;
+    overflow-x: auto;
+    resize: vertical;
+}
+.cdx-input {
+    border: 1px solid rgba(201,201,204,.48);
+    -webkit-box-shadow: inset 0 1px 2px 0 rgba(35,44,72,.06);
+    box-shadow: inset 0 1px 2px #232c480f;
+    border-radius: 3px;
+    padding: 10px 12px;
+    outline: none;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.cdx-list__item {
+    padding: 5.5px 0 5.5px 3px;
+    line-height: 1.6em;
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+.ce-block {
+    -webkit-animation: fade-in .3s ease;
+    animation: fade-in .3s ease;
+    -webkit-animation-fill-mode: none;
+    animation-fill-mode: none;
+    -webkit-animation-fill-mode: initial;
+    animation-fill-mode: initial;
+}
+.cdx-list {
+    margin: 0;
+    padding-left: 40px;
+    outline: none;
+}
+.cdx-list--ordered {
+    list-style: decimal;
+}
+.ce-block:first-of-type {
+    margin-top: 0;
+}
+.ce-paragraph {
+    line-height: 1.6em;
+    outline: none;
+}
+.cdx-block {
+    padding: 0.4em 0;
+}
+
+.ce-block__content {
+    position: relative;
+    max-width: 650px;
+    margin: 0 auto;
+    -webkit-transition: background-color .15s ease;
+    transition: background-color .15s ease;
+}
+/* Optional: Add some basic styling for the code block */
+.block-code {
+    background-color: #f1f1f1;
+    /*padding: 10px;*/
+    border: 1px solid #ccc;
+    width: 700px;
+    height: 150px;
+    box-sizing: border-box;
+}
+.cdx-marker {
+    background: rgba(245,235,111,0.29);
+    padding: 3px 0;
+}
+.inline-code {
+    background: rgba(250, 239, 240, 0.78);
+    color: #b44437;
+    padding: 3px 4px;
+    border-radius: 5px;
+    margin: 0 1px;
+    font-family: inherit;
+    font-size: 0.86em;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#container {
+    width: 900px;
+    padding: 70px;
+    /*background-color: #f1f1f1;*/
+    border: 1px solid #ccc;
+}

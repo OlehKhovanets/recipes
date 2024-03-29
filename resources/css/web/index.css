@@ -1,0 +1,191 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+ul[class] {
+    list-style: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+.akaya-kanadaka-regular {
+    font-family: "Akaya Kanadaka", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Fondamento", cursive;
+    font-weight: 400;
+    font-style: normal;
+    /* font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+    color: #373A39;
+    font-style: normal; */
+}
+
+.container {
+    max-width: 980px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.menu {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 0;
+}
+
+.menu__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.food-box {
+    display: flex;
+    min-height: 200px;
+    height: 100%;
+    margin-bottom: 20px;
+}
+
+.food__img {
+    width: 200px;
+    height: 200px;
+}
+
+.food__details {
+    padding: 20px 10px 20px 40px;
+}
+
+.food__title,
+.recipe__title {
+    color: #8FBC8F;
+    margin-bottom: 20px;
+}
+
+.recipe__title {
+    text-align: center;
+}
+
+.food__list,
+.recipe__list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.food__item,
+.recipe__item {
+    background-color: #8FBC8F;
+    display: block;
+    padding: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    color: white;
+    font-size: 14px;
+}
+
+.recipe__wrapper {
+    margin-bottom: 50px;
+}
+
+.recipe__img {
+    margin: 0 auto;
+    margin-bottom: 25px;
+}
+
+.answear-content {
+    color:#666666;
+    padding-bottom: 100px;
+}
+
+.container-content {
+    max-width: 950px;
+    width: 65%;
+    margin: 0 auto;
+    line-height: 30px;
+    font-size: 18px;
+    margin-bottom: 100px;
+    color:#666666;
+}
+
+.answear__text {
+    /*padding-bottom: 20px;*/
+    line-height: 25px;
+    font-size: 18px;
+    /*margin-bottom: 10px;*/
+    max-width: 100%;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 576px) {
+    .food__title {
+        margin-bottom: 8px;
+        font-size: 18px;
+    }
+
+    .food__img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .food-box {
+        align-items: center;
+    }
+
+    .food__details {
+        padding: 0px 10px 0px 14px;
+    }
+
+    .food__item {
+        margin-right: 6px;
+        margin-bottom: 6px;
+        font-size: 10px;
+    }
+}

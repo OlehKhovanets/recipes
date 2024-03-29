@@ -1,0 +1,25 @@
+<?php
+
+return [
+    'auto_start' => 'Your download should start automatically',
+    'personal_details' => 'Personal details',
+    'first_last_name' => 'First and Last name',
+    'upload_photo' => 'Upload photo',
+    'address' => 'Address',
+    'phone' => 'Phone',
+    'email' => 'Email',
+    'prof_summ' => 'Professional Summary',
+    'languages' => 'Languages',
+    'skills' => 'Skills',
+    'lang_describe' => 'Describe your level',
+    'skill_describe' => 'Describe your skills',
+    'education' => 'Education',
+    'experience' => 'Experience',
+    'school' => 'School',
+    'start_end_date' => 'Start & End Date',
+    'faculty' => 'Faculty',
+    'degree' => 'Degree',
+    'job_title' => 'Job title',
+    'employer' => 'Employer',
+    'description' => 'Description',
+];

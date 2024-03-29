@@ -1,0 +1,44 @@
+#staticText{
+    font-size: 2rem;
+    line-height: 1;
+    font-weight: 100;
+}
+
+
+#typeline {
+    font-size: 1rem;
+    line-height: 0;
+}
+
+@media (max-width: 500px) {
+    #staticText{
+        font-size: 1.8rem;
+    }
+
+    #typeline {
+        font-size: 0.9rem;
+    }
+
+}
+
+@media (max-width: 390px) {
+    #staticText{
+        font-size: 1.8rem;
+    }
+
+    #typeline {
+        font-size: 0.9rem;
+    }
+}
+em {
+    border-right: .1em solid black;
+    width: 20ch;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-top: 0;
+    color: #3295dd;
+    -webkit-animation: typing 3s steps(21, end),
+    blink-caret .5s step-end infinite alternate;
+}
+
+

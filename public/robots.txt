@@ -1,0 +1,17 @@
+User-agent: *
+Disallow: /
+
+Disallow: /en/pages/cookies
+Disallow: /pages/cookies
+
+Disallow: /en/pages/pwa
+Disallow: /pages/pwa
+
+Disallow: /en/question/junior-php-developer/create
+Disallow: /question/junior-php-developer/create
+
+Disallow: /en/whole-search
+Disallow: /whole-search
+
+Disallow: /en/profile
+Disallow: /profile

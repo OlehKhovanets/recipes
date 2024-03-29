@@ -1,0 +1,25 @@
+<?php
+
+return [
+    'auto_start' => 'Ваша загрузка повинна початися автоматично',
+    'personal_details' => 'Персональні дані',
+    'first_last_name' => 'Ім\'я та прізвище',
+    'upload_photo' => 'Загрузити фотографію',
+    'address' => 'Адреса',
+    'phone' => 'Номер телефону',
+    'email' => 'Емейл',
+    'prof_summ' => 'Професійне резюме',
+    'languages' => 'Мови',
+    'skills' => 'Навички',
+    'lang_describe' => 'Опишіть рівень',
+    'skill_describe' => 'Опишіть навички',
+    'education' => 'Освіта',
+    'experience' => 'Досвід',
+    'school' => 'Школа/Університет',
+    'start_end_date' => 'Дата початку та закінчення',
+    'faculty' => 'Факультет',
+    'degree' => 'Ступінь',
+    'job_title' => 'Назва посади',
+    'employer' => 'Роботодавець',
+    'description' => 'Опис',
+];
