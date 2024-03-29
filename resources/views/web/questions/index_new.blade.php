@@ -121,7 +121,7 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     function loadMoreData(page, search) {
-        let url = '/recipes?page=' + page;
+        let url = '/recipes-list?page=' + page;
 
         if (search != '') {
             url += '&search=' + search;
