@@ -49,14 +49,14 @@ select {
 }
 
 .akaya-kanadaka-regular {
-    font-family: "Akaya Kanadaka", system-ui;
+    /*font-family: "Akaya Kanadaka", system-ui;*/
     font-weight: 400;
     font-style: normal;
 }
 
 body {
     min-height: 100vh;
-    font-family: "Fondamento", cursive;
+    /*font-family: "Fondamento", cursive;*/
     font-weight: 400;
     font-style: normal;
     /* font-family: 'Open Sans', sans-serif;
