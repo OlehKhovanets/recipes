@@ -16,7 +16,7 @@ use App\Http\Admin\Controllers\Tags\TagController;
 
 //Route::group(['middleware' => 'is_admin'], function () {
 
-    Route::group(['prefix' => '/ingredients'], function () {
+    Route::group(['prefix' => '/ingredients', 'middleware' => 'checkAuth'], function () {
         Route::get('/', [IngredientController::class, 'index'])->name('admin.ingredients');
         Route::get('/create', [IngredientController::class, 'create'])->name('admin.ingredients.create');
         Route::post('/store', [IngredientController::class, 'store'])->name('admin.ingredients.store');
@@ -24,7 +24,7 @@ use App\Http\Admin\Controllers\Tags\TagController;
         Route::post('/{id}/update', [IngredientController::class, 'update'])->name('admin.ingredients.update');
     });
 
-    Route::group(['prefix' => '/recipe-builder'], function () {
+    Route::group(['prefix' => '/recipe-builder', 'middleware' => 'checkAuth'], function () {
         Route::get('/', [RecipeController::class, 'index'])->name('admin.recipes.index');
         Route::get('/{id}/edit', [RecipeController::class, 'edit'])->name('admin.recipes.edit');
         Route::get('/create', [RecipeController::class, 'create'])->name('admin.recipes.create');
@@ -38,7 +38,7 @@ Route::get('/sign-in', [SignInController::class, 'index'])->name('admin.sign-in'
 
 //API
 /*QUESTIONS*/
-Route::group(['prefix' => '/api'], function () {
+Route::group(['prefix' => '/api', 'middleware' => 'checkAuth'], function () {
     Route::post('/recipes/{id}', [\App\Http\Controllers\Api\Recipes\RecipeController::class, 'update'])->name('question.update');
     Route::post('/recipes', [\App\Http\Controllers\Api\Recipes\RecipeController::class, 'create'])->name('question.create');
 });

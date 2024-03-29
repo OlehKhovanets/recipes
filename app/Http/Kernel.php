@@ -4,6 +4,7 @@ namespace App\Http;
 
 use App\Http\Admin\Middleware\CheckIsAdmin;
 use App\Http\Middleware\AuthorizeViaQr;
+use App\Http\Middleware\CheckAuth;
 use App\Http\Middleware\UserActivity;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
@@ -74,7 +75,8 @@ class Kernel extends HttpKernel
         'localeSessionRedirect'   => \Mcamara\LaravelLocalization\Middleware\LocaleSessionRedirect::class,
         'localeCookieRedirect'    => \Mcamara\LaravelLocalization\Middleware\LocaleCookieRedirect::class,
         'localeViewPath'          => \Mcamara\LaravelLocalization\Middleware\LaravelLocalizationViewPath::class,
-        'authorize_via_qr' => AuthorizeViaQr::class
+        'authorize_via_qr' => AuthorizeViaQr::class,
+        'checkAuth' => CheckAuth::class
     ];
 
     protected function bootstrappers()
