@@ -8,6 +8,7 @@
     <link rel="icon" type="image/png" href="/admin/assets/img/favicon.png">
     <title>
         Панель рецептів
+        @laravelPWA
     </title>
     @notifyCss
     <!--     Fonts and icons     -->
