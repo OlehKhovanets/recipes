@@ -9,6 +9,7 @@ Route::get('/recipe/{questionIn}', [\App\Http\Controllers\Web\Answers\IndexContr
 
 
 Route::get('recipes', function (\Illuminate\Http\Request $request) {
+    dd('asdf');
     $days = [
         1 => 'Понеділок',
         2 => 'Вівторок',
