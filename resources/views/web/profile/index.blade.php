@@ -81,6 +81,9 @@
 <main>
     <section class="food">
         <div class="container">
+            <div class="answear-top__box">
+                <a class="button-generate links" href="/generate">Згенерувати</a>
+            </div>
             <div class=" question-list"></div>
         </div>
     </section>
