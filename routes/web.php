@@ -3,7 +3,10 @@
 use App\Models\UserRecipeSortedByDay;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [\App\Http\Controllers\Web\Home\IndexController::class, 'index'])->name('index.index');
+Route::get('/', function () {
+    return view('test-telegram');
+});
+//Route::get('/', [\App\Http\Controllers\Web\Home\IndexController::class, 'index'])->name('index.index');
 Route::get('/profile', [\App\Http\Controllers\Web\Home\IndexController::class, 'profile'])->name('index.profile');
 Route::get('/generate', [\App\Http\Controllers\Web\Home\GeneratePdfController::class, 'index'])->name('index.generatePdf');
 Route::get('/recipe/{questionIn}', [\App\Http\Controllers\Web\Answers\IndexController::class, 'answer'])->name('index.answer');
