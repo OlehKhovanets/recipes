@@ -4,8 +4,41 @@ use App\Models\UserRecipeSortedByDay;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('test-telegram');
+//    return view('test-telegram');
+    $botToken = '8056807808:AAFgehnBWnbi1NciBhYd0q3kd5w0Zv_MKfo>';
+    $initData = $_GET;  // Telegram Web App передасть ці дані у запиті GET
+
+    if (validateTelegramData($initData, $botToken)) {
+        // Дані успішно перевірені
+        echo "Дані перевірені. ID користувача: " . $initData['user']['id'];
+    } else {
+        // Дані не пройшли перевірку
+        echo "Невірні дані!";
+    }
 });
+
+function validateTelegramData($data, $botToken) {
+    $checkHash = $data['hash'];
+    unset($data['hash']);
+
+    $dataCheckArr = [];
+    foreach ($data as $key => $value) {
+        $dataCheckArr[] = $key . '=' . $value;
+    }
+
+    sort($dataCheckArr);
+    $dataCheckString = implode("\n", $dataCheckArr);
+
+    $secretKey = hash('sha256', $botToken, true);
+    $hash = hash_hmac('sha256', $dataCheckString, $secretKey);
+
+    if ($hash === $checkHash) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 //Route::get('/', [\App\Http\Controllers\Web\Home\IndexController::class, 'index'])->name('index.index');
 Route::get('/profile', [\App\Http\Controllers\Web\Home\IndexController::class, 'profile'])->name('index.profile');
 Route::get('/generate', [\App\Http\Controllers\Web\Home\GeneratePdfController::class, 'index'])->name('index.generatePdf');
