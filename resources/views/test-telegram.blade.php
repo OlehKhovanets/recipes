@@ -28,9 +28,9 @@
     // // Якщо необхідно отримати chat_id
     const userId = initDataUnsafe.user?.id;
     // console.log("User ID (chat_id):", userId);
-    alert(userId);
+    WebApp.showAlert(`Init Data: ${JSON.stringify(initDataUnsafe)}`);
     var WebApp = window.Telegram.WebApp;
-    WebApp.showAlert(`Добро пожаловать, @${WebApp.WebAppUser.username}.`);
+    // WebApp.showAlert(`Добро пожаловать, @${WebApp.WebAppUser.username}.`);
     // Якщо потрібно відправити ці дані на сервер
     fetch('/log-webapp-data', {
         method: 'POST',
