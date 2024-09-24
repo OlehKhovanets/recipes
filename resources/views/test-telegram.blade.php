@@ -19,8 +19,8 @@
     const initDataUnsafe = Telegram.WebApp.initDataUnsafe || {};
     //
     // // Виведення даних для тестування
-    // console.log("Init Data:", initData);
-    // console.log("Init Data Unsafe:", initDataUnsafe);
+    console.log("Init Data:", initData);
+    console.log("Init Data Unsafe:", initDataUnsafe);
     //
     // // 3. Виведення інформації про користувача на сторінці
     // document.getElementById('user-info').innerText = `Привіт, ${initDataUnsafe.user?.first_name || 'користувач'}!`;
@@ -32,12 +32,13 @@
     var WebApp = window.Telegram.WebApp;
     WebApp.showAlert(`Добро пожаловать, @${WebApp.WebAppUser.username}.`);
     // Якщо потрібно відправити ці дані на сервер
-    fetch('/handle-webapp-data', {
+    fetch('/log-webapp-data', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
+            'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
         },
-        body: JSON.stringify({ userId }),
+        body: JSON.stringify({ initData: initDataUnsafe }),
     });
 </script>
 </body>

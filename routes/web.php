@@ -6,6 +6,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function (\Illuminate\Http\Request $request) {
     return view('test-telegram');
 });
+
+Route::post('/log-webapp-data', [TelegramController::class, 'logWebAppData']);
+
 //Route::get('/', [\App\Http\Controllers\Web\Home\IndexController::class, 'index'])->name('index.index');
 Route::get('/profile', [\App\Http\Controllers\Web\Home\IndexController::class, 'profile'])->name('index.profile');
 Route::get('/generate', [\App\Http\Controllers\Web\Home\GeneratePdfController::class, 'index'])->name('index.generatePdf');
