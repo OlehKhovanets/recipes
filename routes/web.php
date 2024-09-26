@@ -8,6 +8,7 @@ Route::get('/', function () {
 });
 
 Route::post('/log-webapp-data', function (\Illuminate\Http\Request $request) {
+    \Illuminate\Support\Facades\Log::info(json_encode($request->all()));
 // Отримуємо JSON дані з запиту
     $webAppData = $request->input('initData');
 
