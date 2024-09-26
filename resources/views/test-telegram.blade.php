@@ -36,10 +36,21 @@
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
         },
         body: JSON.stringify({ initData: initDataUnsafe }),
-    });
+    })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            alert('Success: ' + JSON.stringify(data)); // Виведення даних через alert
+        })
+        .catch((error) => {
+            alert('Error: ' + error.message); // Виведення помилки через alert
+        });
 </script>
 </body>
 </html>
