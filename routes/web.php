@@ -3,11 +3,20 @@
 use App\Models\UserRecipeSortedByDay;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function (\Illuminate\Http\Request $request) {
+Route::get('/', function () {
     return view('test-telegram');
 });
 
-Route::post('/log-webapp-data', [TelegramController::class, 'logWebAppData']);
+Route::post('/log-webapp-data', function (\Illuminate\Http\Request $request) {
+// Отримуємо JSON дані з запиту
+    $webAppData = $request->input('initData');
+
+    \App\Models\WebApp::query()->create([
+        'webapp_data' => $webAppData
+    ]);
+
+    return response()->json(['message' => 'Дані збережені успішно']);
+});
 
 //Route::get('/', [\App\Http\Controllers\Web\Home\IndexController::class, 'index'])->name('index.index');
 Route::get('/profile', [\App\Http\Controllers\Web\Home\IndexController::class, 'profile'])->name('index.profile');
