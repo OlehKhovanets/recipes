@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Telegram Web App</title>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
 <h1>Привіт, користувачу!</h1>
@@ -33,41 +32,28 @@
     var WebApp = window.Telegram.WebApp;
     // WebApp.showAlert(`Добро пожаловать, @${WebApp.WebAppUser.username}.`);
     // Якщо потрібно відправити ці дані на сервер
-    // fetch('/log-webapp-data', {
-    //     method: 'POST',
-    //     headers: {
-    //         'Content-Type': 'application/json',
-    //     },
-    //     body: JSON.stringify({ initData: initDataUnsafe }),
-    // })
-    //     .then(response => {
-    //         if (!response.ok) {
-    //             return response.text().then(text => {
-    //                 alert('Network response was not ok: ' + text); // Виводимо відповідь через alert
-    //                 throw new Error('Network response was not ok');
-    //             });
-    //         }
-    //         return response.json();
-    //     })
-    //     .then(data => {
-    //         alert('Success: ' + JSON.stringify(data)); // Виведення даних через alert
-    //     })
-    //     .catch((error) => {
-    //         alert('Error: ' + error.message); // Виведення помилки через alert
-    //     });
-
-    $.ajax("/log-webapp-data", {
-        type: "POST",
-        data: { initData },
-        dataType: "json",
-        success: function (result) {
-            if (result.ok) {
-                alert('ok');
-            } else {
-                alert('not ok');
+    fetch('/log-webapp-data', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ initData: initDataUnsafe }),
+    })
+        .then(response => {
+            if (!response.ok) {
+                return response.text().then(text => {
+                    alert('Network response was not ok: ' + text); // Виводимо відповідь через alert
+                    throw new Error('Network response was not ok');
+                });
             }
-        }
-    });
+            return response.json();
+        })
+        .then(data => {
+            alert('Success: ' + JSON.stringify(data)); // Виведення даних через alert
+        })
+        .catch((error) => {
+            alert('Error: ' + error.message); // Виведення помилки через alert
+        });
 </script>
 </body>
 </html>
