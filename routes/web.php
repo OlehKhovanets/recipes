@@ -12,10 +12,10 @@ Route::post('/log-webapp-data', function (\Illuminate\Http\Request $request) {
 // Отримуємо JSON дані з запиту
     $webAppData = $request->input('initData');
 
-    $initDataJson = json_encode($webAppData);
+//    $initDataJson = json_encode($webAppData);
 
     \App\Models\WebApp::query()->create([
-        'webapp_data' => $initDataJson
+        'webapp_data' => $webAppData
     ]);
 
     return response()->json(['message' => 'Дані збережені успішно']);
