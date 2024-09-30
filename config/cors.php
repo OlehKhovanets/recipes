@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'paths' => ['*'],
+    'paths' => ['api/*', 'log-webapp-data'],
 
     'allowed_methods' => ['*'],
 
