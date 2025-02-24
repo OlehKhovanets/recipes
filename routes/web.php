@@ -3,9 +3,11 @@
 use App\Models\UserRecipeSortedByDay;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('test-telegram');
-});
+//Route::get('/', function () {
+//    return view('test-telegram');
+//});
+
+Route::get('/', [\App\Http\Controllers\Web\Home\IndexController::class, 'index'])->name('index.index');
 
 Route::post('/log-webapp-data', function (\Illuminate\Http\Request $request) {
     \Illuminate\Support\Facades\Log::info(json_encode($request->all()));
