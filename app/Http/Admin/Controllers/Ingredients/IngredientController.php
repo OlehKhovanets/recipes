@@ -6,8 +6,6 @@ use App\Http\Admin\Controllers\Controller;
 use App\Http\Requests\Branches\CreateRequest;
 use App\Http\Requests\Branches\UpdateRequest;
 use App\Models\Ingredient;
-use App\Models\SubBranch;
-use Illuminate\Support\Facades\Cache;
 
 class IngredientController extends Controller
 {
